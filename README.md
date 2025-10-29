@@ -1,27 +1,43 @@
-# Proyecto de Práctica con Streams en Java
+# Práctica de Java Streams
 
-Este proyecto fue desarrollado como ejercicio para practicar el uso de Streams y colecciones en Java.  
-Incluye varias clases (`Alumno`, `Producto`, `Libro` y `Empleado`) y un programa principal que realiza diferentes operaciones con listas de objetos.
+Este repositorio contiene un proyecto de ejercicio para practicar la manipulación de colecciones en Java utilizando la API de Streams (Java 8+).
 
-## Contenido
+El objetivo es demostrar diversas operaciones funcionales sobre un conjunto de datos de ejemplo.
 
-- **Paquete `Entidades`**: contiene las clases modelo con sus atributos, constructores y anotaciones de Lombok para simplificar el código.
-- **Clase `Main`**: ejecuta ejemplos de filtrado, agrupamiento, ordenamiento y cálculos con Streams.
+## Clases de Entidad
 
-## Temas aplicados
+El proyecto utiliza las siguientes clases modelo (POJOs) para simular datos reales:
 
-- Uso de **Streams** para manipular colecciones.
-- Métodos intermedios (`filter`, `map`, `sorted`) y terminales (`collect`, `average`, `sum`, `max`).
-- Agrupamiento con `Collectors.groupingBy()`.
-- Uso de `Optional` y `Comparator`.
-- Anotaciones de **Lombok** (`@Getter`, `@Setter`, `@ToString`, `@Builder`) para reducir código repetitivo.
+* `Alumno`
+* `Producto`
+* `Libro`
+* `Empleado`
+
+Todas las entidades están construidas con **Lombok** (`@Getter`, `@Setter`, `@ToString`, `@Builder`) para reducir el código repetitivo.
+
+## Conceptos Aplicados en `Main.java`
+
+La clase `Main` contiene todos los ejemplos prácticos. Ejecuta una serie de operaciones en listas de objetos, mostrando los resultados por consola.
+
+Los principales temas cubiertos son:
+
+* **Pipelines de Streams**: Encadenamiento de métodos.
+* **Operaciones Intermedias**: `filter()`, `map()`, `sorted()`.
+* **Operaciones Terminales**:
+    * `collect()` (para agrupar en `List`, `Set`, `Map`).
+    * `average()`, `sum()`, `max()`, `min()` para cálculos.
+* **Agrupamiento Avanzado**: `Collectors.groupingBy()` para clasificar datos.
+* **Ordenamiento**: Uso de `Comparator` para lógicas de ordenamiento personalizadas.
+* **Manejo de Nulos**: Uso de `Optional` para representar valores que pueden estar ausentes.
 
 ## Requisitos
 
-- **Java 17** o superior.
-- **Lombok** configurado en el IDE.
+* JDK 17 o superior.
+* Plugin de Lombok configurado en el IDE (necesario para que el IDE compile el proyecto correctamente).
 
 ## Ejecución
 
-Clonar el repositorio y ejecutar la clase `Main`.  
-El programa muestra por consola los resultados de las operaciones realizadas sobre las distintas listas de objetos.
+1.  Clonar el repositorio.
+2.  Abrir el proyecto en un IDE (como IntelliJ IDEA, Eclipse, o VS Code).
+3.  Ejecutar la clase `Main.java`.
+4.  Observar los resultados de las operaciones en la consola.
